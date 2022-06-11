@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  {{.title}}<br>
+  Show all students<button type="button" onclick="ShowAllStudents()" id="pokaz">click me</button><br><br>
+  <p id="tutaj"></p>
+  Create student <form>
+     Name: <input type="text" name="name"><br>
+     Surname <input type="text" name="surname"><br>
+     Age <input type="number">
+     <input type="submit" value="Send"><br>
+  </form>
+  <br>
+  Select student<input type="number"><button>clicke me</button><br><br>
+  Update student <form>
+      Name<input type="text" name="name"><br>
+      Surname<input type="text" name="surname"><br>
+      Age <input type="numbrt" name="age">
+      <input type="submit" value="Send">
+  </form><br>
+  Delete student<input type="number"><button>Click me</button><br>
+  {{range .studs}}
+      {{.}}
+      {{end}}
+      <script>
+        ShowAllStudents();{
+          const xhttp= new XMLHttpRequest();
+          xhttp.onload=function(){
+            document.getElementById("pokaz").innerHTML="dsdsd"
+          }
+         // xhttp.open("GET")
+         xhttp.send();
+        }
+      </script>
+</body>
+</html>
